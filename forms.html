@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Forms</title>
+</head>
+
+<body>
+    <div>
+        <h1>Forms</h1>
+        <!-- Front end validation, backend validation-->
+
+        <form>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="John" name="firstName" autofocus required>
+            <br>
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Doe" name="lastName" required>
+            <br>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+
+            <br>
+            <br>
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" name="contactNumber" id="contactNumber" placeholder="+233 44 92782938" minlength="10"
+                maxlength="15" disabled>
+            <br>
+            <br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob" max="2023-03-25" required>
+            <br>
+            <br>
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" accept="image/*" multiple id="profilePicture" name="profilePicture" required>
+
+            <br>
+            <br>
+            <label for="description">Description</label>
+            <textarea readonly id="description" cols="50" rows="5">Hello, tell us a little bit ...
+            </textarea>
+            <p>Select Gender</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            
+            <p>Skill set</p>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">Html</label>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="skills" value="js">
+            <label for="js">JS</label>
+
+            <!-- checkbox, radio, select, readonly, disabled-->
+            <br>
+            <br>
+            <label for="country">Select County</label>
+            <select id="country" name="country">
+                <option value="ghana">Ghana</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="south africa">South Africa</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
