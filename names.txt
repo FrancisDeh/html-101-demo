@@ -1,0 +1,16 @@
+http://127.0.0.1:5500/forms.html?
+firstName=Francis
+&
+lastName=Deh
+&
+email=francis.deh755%40gmail.com
+&
+dob=2023-03-16
+&
+profilePicture=IMG-20210208-WA0058.jpg
+&
+gender=male
+&
+skills=html&skills=css&js=js
+&
+country=Ghana
