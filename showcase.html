@@ -7,21 +7,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome | Showcase</title>
     <style>
+        * {
+            margin: 0;
+        }
+
         p {
             font-size: 20px;
             color: gray;
         }
+
+        .first-section {
+            font-size: 48px;
+        }
+
+        .underline-text {
+            text-decoration: underline;
+        }
+
+        #style-list {
+            font-weight: bold;
+        }
+
+        .first-section, .underline-text {
+            text-transform: capitalize;
+        }
+
+        .first-section a {
+            color: #d4a373;
+            text-decoration: none;
+        }
+
+        .first-section a:hover {
+            background-color: #ffb703;
+            color: #023047;
+        }
+        /* this is a css comment */
+        /*
+        border
+        margin
+        padding
+         */
+         div {
+            /* border-style: solid;
+            border-width: 10px;  em, rem, %, pt, px 
+            border-color: #e76f51; */
+            border: 10px solid #e76f51;
+
+            border-bottom-color: #000000;
+            border-top-style: double;
+            border-radius: 20px;
+
+            padding-left: 10px;
+            padding-top: 15px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+
+            margin: 20px;
+         }
+
+         .error-alert {
+            border: 3px solid #d00000;
+            border-bottom: 3px dashed black;
+            color: #ffff;
+            background-color: #000000;
+
+            font-size: 40px;
+            font-weight: 300;
+            font-family: sans-serif;
+            /* top right bottom left */
+            /* padding: 15px 10px 20px 25px; */
+            /* padding: 25px;  all sides */
+            /* padding: 20px 10px; top and bottom left and right */ 
+            padding: 20px 10px 15px;
+            /* padding: 10px 0 0 0; */
+         }
+
+        
     </style>
 </head>
 
 <body>
-    <p style="font-size: 20px; color: red; text-transform: lowercase;">This is a pretty paragragh</p>
+    <!-- This is an html comment -->
+    <p class="first-section underline-text">This is a pretty paragragh</p>
     <p>There are 3 options of styling</p>
-    <ul>
+    <ul id="style-list">
         <li>Inline Styles</li>
         <li>Internal Styles</li>
         <li>External Styles</li>
     </ul>
+    <p class="error-alert">This is an error message</p>
+    <div class="first-section">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur. Eaque pariatur necessitatibus aut
+        placeat provident facilis doloremque hic totam! Quibusdam nostrum
+        <a href="#">necessitatibus</a> delectus deserunt
+        modi non soluta
+        quisquam blanditiis.
+    </div>
+    <br>
+    <div class="first-section">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, rerum architecto. Neque quisquam cum veritatis eos,
+        ipsam inventore totam <a href="#">excepturi</a> accusamus illum sint quos distinctio incidunt, enim placeat minima
+        delectus!
+    </div>
 </body>
 
 </html>
