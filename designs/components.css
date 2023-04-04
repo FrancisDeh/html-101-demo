@@ -1,0 +1,96 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    width: 800px;
+    background-color: #2a9d8f;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dialog-container {
+    background-color: #fff;
+    width: 500px;
+    height: 250px;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+.dialog-body {
+    padding: 25px;
+    margin-bottom: 30px;
+
+}
+
+.dialog-footer {
+    background-color: #F2F4F8;
+    height: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 25px;
+    text-align: right;
+}
+
+.dialog-container p {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #354f52;
+    opacity: 0.8;
+}
+
+.dialog-container h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.dialog-container i {
+    color: gray;
+    float: right;
+    /* float: left, right*/
+}
+
+#deactivate-button {
+    padding: 10px;
+    background-color: #c1121f;
+    color: #fff;
+    border: none;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cancel-button {
+    padding: 5px;
+    border: none;
+    letter-spacing: 0.5px;
+    color: #354f52;
+    font-weight: bold;
+    opacity: 0.8;
+    background-color: #F2F4F8;
+    cursor: pointer;
+}
+
+.caution-alert {
+    width: 500px;
+    height: 150px;
+    background-color: #FFF6F0;
+    margin-top: 80px;
+    border: 2px solid #FFE0AD;
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    /* display: flex;
+    gap: 10px;
+    align-items: baseline; */
+}
+
+.body-alert {
+    float: right;
+    width: 92%;
+}
+
+.body-alert p {
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 15px;
+}
