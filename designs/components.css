@@ -4,7 +4,7 @@
 
 body {
     width: 800px;
-    background-color: #2a9d8f;
+    background-color: #233d4d;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -93,4 +93,61 @@ body {
     font-weight: 300;
     font-size: 12px;
     margin-top: 15px;
+}
+.image-card {
+    width: 400px;
+    height: 130px;
+    background-color: #fff;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.image-card:hover {
+    box-shadow: 0 2px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.image-card img {
+    width: 30%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.image-description {
+    float: right;
+    width: 60%;
+    padding: 15px;
+}
+
+.image-card .currency {
+    color: #60758D;
+    font-size: 14px;
+}
+
+.image-card .quantity {
+    color: #4B8F74;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.image-card .quantity span {
+    font-weight: 300;
+}
+
+.icon-container {
+    width: 400px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.icon-container:hover {
+    box-shadow: 0 2px 5px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
