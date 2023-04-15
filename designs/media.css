@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    font-family: 'Alkatra', cursive;
+    font-size: 50px;
+}
+
+.la-twitter,
+.la-facebook-official,
+.la-linkedin {
+    color: #2d6cdf;
+}
+
+.la-whatsapp {
+    color: rgb(8, 192, 8);
+}
+
+.la-instagram {
+    color: #D8427B;
+}
+
+.social-handles-container {
+    background-color: black;
+    padding: 10px;
+    height: 800px;
+
+    display: flex;
+    /* 
+    flex-start, flex-end, center, space-between, space-around, space-evenly
+    */
+    justify-content: start;
+    /*
+    row, row-reverse, column, column-reverse
+    */
+    flex-direction: row;
+    /*
+    nowrap, wrap, wrap-reverse
+    */
+    /* flex-wrap: wrap; */
+
+    align-items: start;
+
+    /* overflow: scroll; */
+
+}
+
+.social-handles-container div {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    flex: auto;
+}
+
+/*
+min-width - when the screen size is greater than 400px
+max-width - when the screen size is less than 400px
+*/
+@media screen and (max-width: 600px) {
+
+    * {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    .social-handles-container {
+        background-color: #e2f3f5;
+        flex-direction: column;
+    }
+
+    .social-handles-container div {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    * {
+        margin: 0;
+        font-size: 70px;
+    }
+
+    .social-handles-container {
+        background-color: #f3558e;
+    }
+}
