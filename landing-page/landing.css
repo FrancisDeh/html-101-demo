@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+section.cover {
+    /* background-color: #F6C223; */
+    background-image: url("./images/bg-masthead.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 1300px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+section .cover-content {
+    text-align: center;
+}
+
+section .cover-content h1 {
+    font-size: 5em;
+    /* 16px = 1em,  */
+}
+
+section .cover-content h4 {
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: 500;
+}
+
+section .cover-content a {
+    background-color: #1D809F;
+    color: #fff;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
