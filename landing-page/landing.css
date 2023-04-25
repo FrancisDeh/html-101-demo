@@ -135,6 +135,30 @@ section .services-item-container {
     color: #C3DBE3;
 }
 
+.download-section .link-button {
+    background-color: #1D809F;
+}
+
+.download-section {
+    background-image: url("images/bg-callout.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    padding: 100px 50px;
+    height: 700px;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-section h1 {
+    font-size: 3em;
+    max-width: 700px;
+}
 footer {
     height: 300px;
 }
