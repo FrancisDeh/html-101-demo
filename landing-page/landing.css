@@ -159,6 +159,63 @@ section .services-item-container {
     font-size: 3em;
     max-width: 700px;
 }
+.two-buttons-section {
+    background-color: #1D809F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.click-me {
+    background-color: #fff;
+    color: #000;
+}
+
+.look-at-me {
+    background-color: #000;
+    margin-left: 25px;
+}
+
+.two-buttons-content {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.two-buttons-content p {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
 footer {
-    height: 300px;
+    padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    footer .socials-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer .socials-item {
+        height: 60px;
+        width: 60px;
+        background-color: #1D809F;
+        margin-right: 15px;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer .socials-item i {
+        color: #fff;
+    }
+    
+    footer .footer-content p {
+        color: #8C9399;
+        margin-top: 30px;
 }
