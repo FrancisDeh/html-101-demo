@@ -3,6 +3,47 @@
     font-family: "Poppins", sans-serif;
 }
 
+header {
+    background-color: #1D809F;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header .logo,
+nav {
+    margin: auto;
+}
+
+header .logo i {
+    color: #F6C223;
+}
+
+header .logo h4 {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+    border-bottom: #1D809F solid 2px;
+}
+
+header nav ul a:hover {
+    border-bottom: #F6C223 solid 2px;
+}
+
+header nav li {
+    display: inline-block;
+}
 section.cover {
     /* background-color: #F6C223; */
     background-image: url("./images/bg-masthead.jpg");
