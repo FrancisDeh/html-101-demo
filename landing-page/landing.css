@@ -315,6 +315,63 @@ section .services-item-container {
     font-size: 1.8em;
     font-weight: bold;
 }
+section.newsletter {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .newsletter-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+section .newsletter-content h4 {
+    font-size: 2em;
+}
+
+section .newsletter-content p {
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+section .newsletter-form {
+    margin-top: 30px;
+}
+
+/* input[type="email"] */
+#email-input {
+    padding: 5px;
+    border: #1D809F solid 2px;
+    border-radius: 5px;
+    /* border: none;
+    border-bottom: #1D809F solid 1px; */
+    width: 300px;
+    height: 30px;
+    outline: none;
+    font-weight: 200;
+}
+
+#email-input:focus {
+    border: #F6C223 solid 2px;
+    border-radius: 5px;
+    /* border: none;
+    border-bottom: #F6C223 solid 1px; */
+}
+
+#submit-button {
+    color: #fff;
+    margin-left: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+}
 footer {
     padding: 50px;
         display: flex;
