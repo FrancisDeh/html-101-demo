@@ -54,7 +54,6 @@ section.cover {
 
     display: flex;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -118,6 +117,7 @@ section.services {
     box-sizing: border-box;
     background-color: #1D809F;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -404,4 +404,59 @@ footer {
     footer .footer-content p {
         color: #8C9399;
         margin-top: 30px;
+}
+/* Target any screen between 1px - 750px */
+@media screen and (max-width: 800px) {
+
+    section.cover {
+        height: 800px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header .logo h4 {
+        margin-bottom: 10px;
+    }
+
+    section .services-item-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section .services-item {
+        margin-bottom: 40px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Target any screen between 1px - 500px */
+@media screen and (max-width: 510px) {
+
+    header nav ul a {
+        padding: 5px;
+    }
+
+    header nav ul {
+        padding: 0;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+
+    #submit-button {
+        margin-top: 10px;
+    }
 }
