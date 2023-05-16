@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Intro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
 
     <style>
-        * {
-            /* margin: 0; */
-            font-family: "Poppins", sans-serif;
-        }
+      * {
+        /* margin: 0; */
+        font-family: "Poppins", sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Hello JS World!!!! Yaaaayyyyyyy!!!! :)</h1>
-    <button onclick="getUserName()">Enter your name</button>
-    <em id="name-holder">Anonymous</em>
-</body>
+  </body>
 
+  <script>
+    let age = 45;
+    age = 67;
+    console.log(age);
 
-<script>
+    const discount = 5;
+    // discount = 8; // cannot be done
+    console.log(discount);
 
-    function getUserName() {
-        let name = prompt("Enter your name");
-        console.log(name);
-        let el = document.getElementById("name-holder");
-        console.log(el);
-        el.innerText = name;
-    }
+    // arithmetic 
+    // add. multiply, subtract, divide, etc
+    let number1 = 45;
+    let number2 = 30;
+    let sum = number1 + number2
+    console.log("Sum = ", sum);
 
+    // The radius of a circle is 7 m. Find the area of the circle.
+    // area = pi * r * r
+    let radius = 7;
+    const pi = 3.142;
+    let area = pi * radius * radius;
+    console.log("Area of the circle is ", area, " m squared");
 
+    let canVote = true; //boolean - true. false
+    let isLesser = 4 < 6;
 
-    console.log("hayyy, this is the console");
-    // document.write("<em>hello docs, we just replaced you right now.. hahahahahaha<em>");
-    // window.alert("Hellooo, this is an alert!!!!!");
+    // arrays - hold a list of elements
+    let names = ["Fafa", "Aron", "Francis", "Janet"];
+    console.log("names = ", names);
 
-    // datatypes - strings, numbers - integers and floats, boolean - true or false, lists or arrays, objects, classes, null, undefined, date time, symbols
-    // variables - let name = "Fafa"; let name = "Aron"; let age = 4;
-    // conditionals - if else else if
-    // loops - for loop, while loop
-    // arithmetic - 4 + 5, * /
-    // functions - organize our code into small units
-    // objects
-    // Events
-    //DOM manipulation
-    // Js Api - local storage, session storage, fetch - make api calls
-    //etc
-</script>
-
+    let fruits = ["Mango"];
+    let scores = [45, 98, 46];
+    let todos = ["wash the bowl", "watch movie"];
+    let carts = ["Pencil", "Book"];
+    console.log(todos[1]);
+  </script>
 </html>
