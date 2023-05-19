@@ -63,6 +63,47 @@
     let scores = [45, 98, 46];
     let todos = ["wash the bowl", "watch movie"];
     let carts = ["Pencil", "Book"];
+
+    // accessing elements in an array/list - using index
+    console.log("all todos", todos);
     console.log(todos[1]);
+    console.log("there are ", todos.length, " todos.");
+    // updating the element in the array
+    todos[0] = "Buy groceries";
+    console.log("todos", todos);
+    //adding elements to the arrary
+    todos.push("House Cleaning");
+    console.log("todos", todos);
+
+
+    // objects
+    let fafasName = "Fafa";
+    let fafasAge = 28; // guess
+    let fafasFavoriteFoods = ["Fufu", "Rice"];
+    let fafasGender = "Female";
+
+    // data is stored using key -> value pair
+    // key: value
+    let fafasData = {"name": "Fafa", "age": 28, "gender": "F", "isGhanaian": true, "favouriteFoods": ["Fufu", "Rice"]};
+    console.log("Fafa's Data", fafasData);
+
+    // access an element of an object
+    console.log("Name", fafasData["name"]);
+
+    // update the element in the object
+    fafasData["gender"] = "Female";
+    console.log("new data", fafasData);
+
+    // conditionals
+    // if else . if else if else if else
+
+    /*
+    Using JavaScript, create a list of your favourite songs.
+    1. Log all the songs to the console
+    2. Access the last element of the songs and log it to console.
+    3. Update the last element of the songs with a new song.
+    4. Log all the songs to the console again.
+    */
+
   </script>
 </html>
