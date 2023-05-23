@@ -30,69 +30,69 @@
   </body>
 
   <script>
-    let age = 45;
-    age = 67;
-    console.log(age);
+    // let age = 45;
+    // age = 67;
+    // console.log(age);
 
-    const discount = 5;
-    // discount = 8; // cannot be done
-    console.log(discount);
+    // const discount = 5;
+    // // discount = 8; // cannot be done
+    // console.log(discount);
 
-    // arithmetic 
-    // add. multiply, subtract, divide, etc
-    let number1 = 45;
-    let number2 = 30;
-    let sum = number1 + number2
-    console.log("Sum = ", sum);
+    // // arithmetic 
+    // // add. multiply, subtract, divide, etc
+    // let number1 = 45;
+    // let number2 = 30;
+    // let sum = number1 + number2
+    // console.log("Sum = ", sum);
 
-    // The radius of a circle is 7 m. Find the area of the circle.
-    // area = pi * r * r
-    let radius = 7;
-    const pi = 3.142;
-    let area = pi * radius * radius;
-    console.log("Area of the circle is ", area, " m squared");
+    // // The radius of a circle is 7 m. Find the area of the circle.
+    // // area = pi * r * r
+    // let radius = 7;
+    // const pi = 3.142;
+    // let area = pi * radius * radius;
+    // console.log("Area of the circle is ", area, " m squared");
 
-    let canVote = true; //boolean - true. false
-    let isLesser = 4 < 6;
+    // let canVote = true; //boolean - true. false
+    // let isLesser = 4 < 6;
 
-    // arrays - hold a list of elements
-    let names = ["Fafa", "Aron", "Francis", "Janet"];
-    console.log("names = ", names);
+    // // arrays - hold a list of elements
+    // let names = ["Fafa", "Aron", "Francis", "Janet"];
+    // console.log("names = ", names);
 
-    let fruits = ["Mango"];
-    let scores = [45, 98, 46];
-    let todos = ["wash the bowl", "watch movie"];
-    let carts = ["Pencil", "Book"];
+    // let fruits = ["Mango"];
+    // let scores = [45, 98, 46];
+    // let todos = ["wash the bowl", "watch movie"];
+    // let carts = ["Pencil", "Book"];
 
-    // accessing elements in an array/list - using index
-    console.log("all todos", todos);
-    console.log(todos[1]);
-    console.log("there are ", todos.length, " todos.");
-    // updating the element in the array
-    todos[0] = "Buy groceries";
-    console.log("todos", todos);
-    //adding elements to the arrary
-    todos.push("House Cleaning");
-    console.log("todos", todos);
+    // // accessing elements in an array/list - using index
+    // console.log("all todos", todos);
+    // console.log(todos[1]);
+    // console.log("there are ", todos.length, " todos.");
+    // // updating the element in the array
+    // todos[0] = "Buy groceries";
+    // console.log("todos", todos);
+    // //adding elements to the arrary
+    // todos.push("House Cleaning");
+    // console.log("todos", todos);
 
 
-    // objects
-    let fafasName = "Fafa";
-    let fafasAge = 28; // guess
-    let fafasFavoriteFoods = ["Fufu", "Rice"];
-    let fafasGender = "Female";
+    // // objects
+    // let fafasName = "Fafa";
+    // let fafasAge = 28; // guess
+    // let fafasFavoriteFoods = ["Fufu", "Rice"];
+    // let fafasGender = "Female";
 
-    // data is stored using key -> value pair
-    // key: value
-    let fafasData = {"name": "Fafa", "age": 28, "gender": "F", "isGhanaian": true, "favouriteFoods": ["Fufu", "Rice"]};
-    console.log("Fafa's Data", fafasData);
+    // // data is stored using key -> value pair
+    // // key: value
+    // let fafasData = {"name": "Fafa", "age": 28, "gender": "F", "isGhanaian": true, "favouriteFoods": ["Fufu", "Rice"]};
+    // console.log("Fafa's Data", fafasData);
 
-    // access an element of an object
-    console.log("Name", fafasData["name"]);
+    // // access an element of an object
+    // console.log("Name", fafasData["name"]);
 
-    // update the element in the object
-    fafasData["gender"] = "Female";
-    console.log("new data", fafasData);
+    // // update the element in the object
+    // fafasData["gender"] = "Female";
+    // console.log("new data", fafasData);
 
     // conditionals
     // if else . if else if else if else
@@ -104,6 +104,36 @@
     3. Update the last element of the songs with a new song.
     4. Log all the songs to the console again.
     */
+
+    // JSON - JavaScript Object Notation.
+
+    let youngAge = 16;
+    const votingAge = 18;
+
+    if(youngAge == votingAge) {
+      console.log("yayyyyyy, you can vote!!! :)");
+    }
+
+    if(youngAge >= votingAge) {
+      console.log("yayyyyyy, you can vote!!! :)");
+      document.write("yayyyyyy, you can vote!!! :)");
+    } else {
+      console.log("oops, you are too young to vote.");
+    }
+
+    let month = -1;
+    if(month == 1) {
+      document.write("January");
+    } else if(month == 2) {
+      document.write("February");
+    } else if(month == 3) {
+      document.write("March");
+    } else if(month == 4) {
+      document.write("April");
+    } else {
+      document.write("Month is between May and December");
+    }
+
 
   </script>
 </html>
