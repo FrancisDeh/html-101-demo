@@ -121,7 +121,7 @@
       console.log("oops, you are too young to vote.");
     }
 
-    let month = -1;
+    let month = 12;
     if(month == 1) {
       document.write("January");
     } else if(month == 2) {
@@ -130,10 +130,43 @@
       document.write("March");
     } else if(month == 4) {
       document.write("April");
-    } else {
+    } else if (month >= 5 && month <= 12) {
       document.write("Month is between May and December");
+    } else {
+      document.write("sorry, you entered a wrong month!");
     }
 
+    // switch cases - conditionals
+
+    // loops - looping through a list of items etc
+    // 3 ways of for loop in js. 
+    // while loop, do while loop
+    //first for loop
+    // count from 0 to 10, count in 1s, or 2s etc
+    let counter = 0;
+    for (counter; counter <= 10; counter++) {
+        console.log(counter);
+    }
+
+
+    let fruits = ["Apple", "Pear", "Avocado", "Guava", "Orange"];
+    for (let index = 0; index < fruits.length; index++) {
+        let fruit = fruits[index];
+        console.log(fruit);
+        // if (fruit === undefined) {
+        //   console.log("fruit does not exist");
+        // } else {
+        //   console.log(fruit);
+        // }
+    }
+
+    for (let index in fruits) {
+        console.log(fruits[index]);
+    }
+
+    for (let fruit of fruits) {
+      console.log(fruit);
+    }
 
   </script>
 </html>
