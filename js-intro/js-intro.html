@@ -168,5 +168,52 @@
       console.log(fruit);
     }
 
+    // there are other ways of looping through an array.
+    
+
+    // looping through objects
+    let person1 = {
+      "name": "James Doe",
+      "age": 34,
+      "gender": "M",
+      "contact": "0203456782"
+    };
+
+    //person1["age"]
+    //person1.age
+
+    // go through the object
+    for (let key in person1) {
+      console.log(key, " => ", person1[key]);
+    }
+
+
+    //while loop
+    let isRaining = true;
+    while (isRaining) {
+      console.log("it is raining, carry your umbrella.");
+      isRaining = false;
+    }
+
+    let counter2 = 1;
+    while(counter2 < 20) {
+      console.log("counting....", counter2);
+      counter2++;
+    }
+
+    /* i want you create an array that holds a list of 5 names.
+     As part of the names, add this name as well, Administrator.
+    Write a for loop, to display all the elements of the array.
+    Whiles you loop through, print "You are the Admin" if the name is Administrator otherwise print "You are not the Admin".*/
+
+
+    // i will explain further
+    function printMessage(message) {
+      console.log(message);
+    }
+
+    printMessage("Hello, this is a new function.");
+
+
   </script>
 </html>
