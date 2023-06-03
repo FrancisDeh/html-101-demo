@@ -26,14 +26,19 @@
 
   <body>
     <h1>Hello JS Function World!!!! Yaaaayyyyyyy!!!! :)</h1>
-    <button onclick="clickMe();">This is a button</button>
+    <button id="btn" class="red-text blue-text" onclick="clickMe();">This is a button</button>
   </body>
 
 <script>
-
+    // Document Object Model - DOM Manipulation.
+    document.getElementsByTagName("button");
+    
+    let counter = 0;
 
     function clickMe() {
         console.log("Click Me Button Clicked ");
+        document.getElementsByTagName("h1")[0].innerHTML = counter;
+        counter++;
     }
 
 
@@ -45,12 +50,13 @@
         return result;
     }
 
+
     let sum = getSumOfTwoNumbers(34, 12);
-    console.log('sum ==', sum);
+    console.log('sum', sum);
 
     function printDataValues(data){
         for (let index in data) {
-            console.log('index =>', index, ' value =>', data[index]);
+            console.log('index', index, ' value =>', data[index]);
         }
     }
 
@@ -78,6 +84,7 @@
 
     // the function accepts a number, and returns true or false
     function canVote(age = 0) {
+      console.log('age', age);
         if(age >= 18) {
             return true;
         } else {
@@ -87,7 +94,7 @@
         // return age >= 18;
     }
 
-    let result = canVote(17);
+    let result = canVote();
     console.log(result);
 
 
