@@ -27,16 +27,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 300px 50px;
+        padding: 100px 50px;
       }
 
       h1 {
         font-size: 150px;
-        color: #be6a15;
       }
 
       h1:hover {
         color: #ffd615;
+        cursor: pointer;
       }
 
       button {
@@ -71,16 +71,43 @@
         background-color: #17b978;
       }
 
+      #reset-btn {
+        border: #000 2px solid;
+        color: #000;
+        background-color: #fff;
+      }
+
+      #reset-btn:hover {
+        border: #fff 2px solid;
+        color: #fff;
+        background-color: #000;
+      }
+
+      .increment-state {
+        color: #17b978;
+      }
+
+      .decrement-state {
+        color: #f85959;
+      }
+
+      .reset-state {
+        color: #000;
+      }
+
     </style>
   </head>
 
   <body>
     <section>
-        <h1 id="counter">0</h1>
+        <h1 class="reset-state" id="counter">0</h1>
         <div>
             <button onclick="decrementCounter();" id="decrement-btn">
                 <i class="la la-minus la-4x"></i>
             </button>
+            <button onclick="resetCounter();" id="reset-btn">
+              <i class="la la-refresh la-4x"></i>
+          </button>
             <button onclick="incrementCounter();"  id="increment-btn">
                 <i class="la la-plus la-4x"></i>
             </button>
@@ -98,22 +125,42 @@
     // we need to be able to increment the counter on increment button click
     function incrementCounter() {
         counter++;
-        console.log(counter);
         counterElement.innerHTML = counter;
+        // counterElement.className = "increment-state";
+        clearStateClasses();
+        counterElement.classList.add("increment-state");
     }
 
     // we need to be able to decrement the counter on decrement button click
     function decrementCounter() {
         counter--;
-        console.log(counter);
         counterElement.innerHTML = counter;
+        // counterElement.className = "decrement-state";
+        clearStateClasses();
+        counterElement.classList.add("decrement-state");
     }
 
     // Assignment:
     // add another button called reset.
     // when the reset button is clicked, set the counter to 0.
+    function resetCounter() {
+      counter = 0;
+      counterElement.innerHTML = counter;
+      // counterElement.className = "reset-state";
+      clearStateClasses();
+      counterElement.classList.add("reset-state");
+    }
+
+    function clearStateClasses() {
+      counterElement.classList.remove("reset-state");
+      counterElement.classList.remove("increment-state");
+      counterElement.classList.remove("decrement-state");
+    }
 
     //todo: change color of counter based on button been clicked.
+    // let age = 45;
+    // age = age + 1; increment by 1 this way or
+    // age += 1; this way
 
   </script>
 </html>
