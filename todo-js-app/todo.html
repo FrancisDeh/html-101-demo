@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 50px;
+      }
+
+      button {
+        padding: 8px;
+        margin-right: 30px;
+        width: 150px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #add-task-btn {
+        border: #086972 2px solid;
+        color: #fff;
+        font-size: 18px;
+        background-color: #086972;
+      }
+
+      input[type="text"] {
+        outline: none;
+        border: none;
+        padding: 8px;
+        font-size: 18px;
+        width: 400px;
+        border-bottom: #086972 2px solid;
+        margin-right: 20px;
+      }
+
+      #logo {
+        margin-bottom: 20px;
+      }
+
+      .table-div {
+        margin-top: 50px;
+        width: 600px;
+      }
+
+    table {
+        width: 100%;
+    }
+
+    td, th {
+      border-bottom: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    .delete-btn {
+        width: 80px;
+        border: #f85959 1px solid;
+        color: #f85959;
+        background-color: #fff;
+    }
+
+
+    .delete-btn:hover {
+        border: #fff 1px solid;
+        color: #fff;
+        background-color: #f85959;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <section>
+        <img id="logo" src="todo-logo.png" width="150" height="150">
+        <div>
+            <form>
+            <input type="text" name="task-name" id="task-name-input" placeholder="Enter your task" required autocomplete="off" autofocus>
+            <button type="submit" id="add-task-btn">
+                <i class="la la-plus"></i> Add Task
+            </button>
+            </form>
+        </div>
+        <div class="table-div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Cook breakfast</td>
+                        <td>12th June, 2023</td>
+                        <td>
+                            <button class="delete-btn">
+                                <i class="la la-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Watch Movie</td>
+                        <td>12th June, 2023</td>
+                        <td>
+                            <button class="delete-btn">
+                                <i class="la la-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+  </body>
+
+  <script>
+    // task ids - incrment by one
+    let id = 0; // todo: create a function to get a new id.
+
+    // id, name, date of the task - template
+    // let task = {
+    //     "id": id + 1,
+    //     "name": "Cleanup kitchen",
+    //     "date":  new Date().toDateString()
+    // }
+
+    // holds our tasks
+    let tasks = [];
+
+    // try adding a task
+    // tasks.push(task);
+
+    // listen to the click event for the add task button
+    let addTastBtnElement = document.getElementById("add-task-btn");
+    addTastBtnElement.addEventListener('click', function(event) {
+        console.log(event.type);
+        //todo: prevent form submission.
+
+        // get the value of the input field
+        let inputFieldElement = document.getElementById("task-name-input");
+        // validate the value, if it is empty, do not proceed.
+        let taskName = inputFieldElement.value;
+        if(taskName === "") {
+            console.error("Task name cannot be empty!");
+            return;
+        }
+        // Create a new task object
+        console.log("we dont reach here");
+        // Add the new task to task array
+    });
+
+  </script>
+</html>
