@@ -96,7 +96,7 @@
     <section>
         <img id="logo" src="todo-logo.png" width="150" height="150">
         <div>
-            <form>
+            <form id="task-form">
             <input type="text" name="task-name" id="task-name-input" placeholder="Enter your task" required autocomplete="off" autofocus>
             <button type="submit" id="add-task-btn">
                 <i class="la la-plus"></i> Add Task
@@ -113,7 +113,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-body">
                     <tr>
                         <td>1</td>
                         <td>Cook breakfast</td>
@@ -159,14 +159,21 @@
     // try adding a task
     // tasks.push(task);
 
-    // listen to the click event for the add task button
-    let addTastBtnElement = document.getElementById("add-task-btn");
-    addTastBtnElement.addEventListener('click', function(event) {
-        console.log(event.type);
-        //todo: prevent form submission.
+    function getNewTaskId() {
+      id = id + 1;
+      // id += 1;
+      return id;
+    }
 
-        // get the value of the input field
-        let inputFieldElement = document.getElementById("task-name-input");
+    // get the form element
+    let formElement = document.getElementById("task-form");
+
+    // listen to the click event for the add task button
+    formElement.addEventListener('submit', function(ev) {
+      ev.preventDefault(); // stops the form from submitting.
+
+      // get the value of the input field
+      let inputFieldElement = document.getElementById("task-name-input");
         // validate the value, if it is empty, do not proceed.
         let taskName = inputFieldElement.value;
         if(taskName === "") {
@@ -174,9 +181,49 @@
             return;
         }
         // Create a new task object
-        console.log("we dont reach here");
+        let task = {
+          "id": getNewTaskId(),
+          "name": taskName,
+          "date": new Date().toDateString()
+        };
+        console.log("Task:", task);
         // Add the new task to task array
+        tasks.push(task);
+        console.log('Tasks:', tasks);
+
+        addTaskElementToDOM(task);
     });
+
+    function addTaskElementToDOM(task) {
+      // how is the dom structured?
+      // <tr>
+      //     <td>2</td>
+      //     <td>Watch Movie</td>
+      //     <td>12th June, 2023</td>
+      //     <td><button class="delete-btn">
+      //       <i class="la la-trash"></i>
+      //       </button>
+      //     </td>
+      // </tr>
+
+      // let heading = document.createElement("h4");
+      // heading.innerText = "Click Me";
+      // heading.classList.add("small-text")
+      // heading.setAttribute("title", "This is a header")
+
+      // create the same structure, and add the element to dom.
+      let tr = document.createElement("tr");
+      let idTd = document.createElement("td");
+      idTd.innerText = "3";
+
+      //todo: create other tds
+      tr.appendChild(idTd);
+      console.log(tr);
+
+      let tableBodyElement = document.getElementById("table-body");
+      console.log(tableBodyElement)
+      tableBodyElement.appendChild(tr);
+    }
 
   </script>
 </html>
