@@ -113,8 +113,8 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
-                    <tr>
+                <tbody>
+                    <!-- <tr>
                         <td>1</td>
                         <td>Cook breakfast</td>
                         <td>12th June, 2023</td>
@@ -134,15 +134,19 @@
                                 <i class="la la-trash"></i>
                             </button>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
-
             </table>
         </div>
+        <img class="empty-view" src="https://img.freepik.com/free-vector/pandas-concept-illustration_114360-7484.jpg?w=740&t=st=1686770802~exp=1686771402~hmac=719874c25a90d68af3260a4d08ee9de2f01774d3b77efa7a0e043a8ed8e83514" alt="Empy Task list" title="Empty tasks">
     </section>
   </body>
 
   <script>
+    // access table and empty view elements
+    let tableView = document.querySelector(".table-div");
+    let emptyView = document.querySelector(".empty-view");
+
     // task ids - incrment by one
     let id = 0; // todo: create a function to get a new id.
 
@@ -158,6 +162,7 @@
 
     // try adding a task
     // tasks.push(task);
+    showOrHideEmptyView();
 
     function getNewTaskId() {
       id = id + 1;
@@ -191,7 +196,11 @@
         tasks.push(task);
         console.log('Tasks:', tasks);
 
+        showOrHideEmptyView();
+
         addTaskElementToDOM(task);
+        // Clear the input field
+        inputFieldElement.value = "";
     });
 
     function addTaskElementToDOM(task) {
@@ -214,15 +223,37 @@
       // create the same structure, and add the element to dom.
       let tr = document.createElement("tr");
       let idTd = document.createElement("td");
-      idTd.innerText = "3";
+      idTd.innerText = task.id;
 
-      //todo: create other tds
+      let nameTd = document.createElement("td");
+      nameTd.innerText = task.name;
+
+      let dateTd = document.createElement("td");
+      dateTd.innerText = task.date;
+
+      let btnTd = document.createElement("td");
+      btnTd.innerHTML = '<button class="delete-btn"><i class="la la-trash"></i></button>';
+      
       tr.appendChild(idTd);
+      tr.appendChild(nameTd);
+      tr.appendChild(dateTd);
+      tr.appendChild(btnTd);
       console.log(tr);
 
-      let tableBodyElement = document.getElementById("table-body");
-      console.log(tableBodyElement)
+      let tableBodyElement = document.querySelector("tbody");
       tableBodyElement.appendChild(tr);
+    }
+
+    function showOrHideEmptyView() {
+      if(tasks.length > 0) {
+        // show table and hide the image
+        tableView.style.display = "block";
+        emptyView.style.display = "none";
+      } else {
+        // show image and hide the table
+        tableView.style.display = "none";
+        emptyView.style.display = "block";
+      }
     }
 
   </script>
